@@ -1,0 +1,15 @@
+[
+  {
+    "id": "b7489dd7-7aff-402-8b36-b80a7894fbe4",
+    "title": "Buzo Nike",
+    "price": 140,
+    "stock": 2
+  },
+  {
+    "id": "b7489dd7-7aff-402-8b36-b80a7894fbe3",
+    "title": "Remera Nike",
+    "description": "Remera Original",
+    "price": 65,
+    "stock": 2
+  }
+]
