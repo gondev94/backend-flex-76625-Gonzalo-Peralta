@@ -16,7 +16,7 @@ app.get("/", (req, res) =>{
 
 // productos.
 
-app.get("/api/productos",  async(req, res) =>{
+app.get("/api/products",  async(req, res) =>{
     try {
         const products = await productManager.getProducts();
         res.status(200).json({ message: "Lista de productos", products});
@@ -25,7 +25,7 @@ app.get("/api/productos",  async(req, res) =>{
     }
 });
 
-app.delete("/api/productos/:pid", async(req, res) =>{
+app.delete("/api/products/:pid", async(req, res) =>{
     try {
         const pid = req.params.pid;
         const products = await productManager.deleteProductById(pid);
@@ -37,7 +37,7 @@ app.delete("/api/productos/:pid", async(req, res) =>{
     }
 });
 
-app.post("/api/productos", async(req, res) =>{
+app.post("/api/products", async(req, res) =>{
     try {
         const newProduct = req.body;
         const products = await productManager.addProduct(newProduct);
@@ -48,7 +48,7 @@ app.post("/api/productos", async(req, res) =>{
     }
 });
 
-app.put("/api/productos/:pid", async(req, res) =>{
+app.put("/api/products/:pid", async(req, res) =>{
     try {
         const pid = req.params.pid;
         const updates = req.body;
@@ -61,7 +61,7 @@ app.put("/api/productos/:pid", async(req, res) =>{
 })
 
 //devolver un producto por su id
-app.get("/api/productos/:pid", async (req, res) => {
+app.get("/api/products/:pid", async (req, res) => {
     try {
         const pid = req.params.pid;
         const product = await productManager.getProductById(pid);
